@@ -21,26 +21,26 @@
             For loopnow = 1 To loopsum
                 TextBox2.Text = "执行中。。。(" & loopnow & "/" & loopsum & ")" & vbNewLine & TextBox2.Text
                 If (CheckBox2.Checked) Then
-                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & TextBox1.Text & "x2.png") & vbNewLine & TextBox2.Text
+                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & TextBox1.Text & "x2.png") & vbNewLine & TextBox2.Text
                     TextBox1.Text = TextBox1.Text & "x2.png"
                 Else
-                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & TextBox1.Text & "x2.jpg") & vbNewLine & TextBox2.Text
+                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & TextBox1.Text & "x2.jpg") & vbNewLine & TextBox2.Text
                     TextBox1.Text = TextBox1.Text & "x2.jpg"
                 End If
             Next
         Else
             If (CheckBox2.Checked) Then
                 TextBox2.Text = "执行中。。。" & vbNewLine & TextBox2.Text
-                'TextBox1.Text = "E:\Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2"
+                'TextBox1.Text = "E:\Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2"
 
-                TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & TextBox1.Text & "x2.png") & vbNewLine & TextBox2.Text
+                TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & TextBox1.Text & "x2.png") & vbNewLine & TextBox2.Text
 
             Else
 
                 TextBox2.Text = "执行中。。。" & vbNewLine & TextBox2.Text
-                'TextBox1.Text = "E:\Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2"
+                'TextBox1.Text = "E:\Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2"
 
-                TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & TextBox1.Text & "x2.jpg") & vbNewLine & TextBox2.Text
+                TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & TextBox1.Text & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & TextBox1.Text & "x2.jpg") & vbNewLine & TextBox2.Text
             End If
         End If
     End Sub
@@ -67,7 +67,7 @@
 
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     '    Label1.Text = TextBox1.Text
-    '    Process.Start("cmd.exe /c E: \Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe" & "-i " & TextBox1.Text & "-m noise_scale --scale_ratio 1.6 --noise_level 2" & "&&pause")
+    '    Process.Start("cmd.exe /c E: \Desktop\waifu2x-caffe\waifu2x-caffe-cui.exe" & "-i " & TextBox1.Text & "-m noise_scale --scale_ratio 2.0 --noise_level 2" & "&&pause")
     'End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -91,11 +91,11 @@
                 For loopnow = 1 To loopsum
                     TextBox2.Text = "(" & sumnow & "/" & filesum & ") " & "单个进度(" & loopnow & "/" & loopsum & ")" & "正在处理文件:" & vbNewLine & foundFile & vbNewLine & TextBox2.Text
                     If (CheckBox2.Checked) Then
-                        TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & foundFile & "x2.png") & vbNewLine & TextBox2.Text
+                        TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & foundFile & "x2.png") & vbNewLine & TextBox2.Text
                         foundFile = foundFile & "x2.png"
                     Else
 
-                        TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & foundFile & "x2.jpg") & vbNewLine & TextBox2.Text
+                        TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & foundFile & "x2.jpg") & vbNewLine & TextBox2.Text
                         foundFile = foundFile & "x2.jpg"
                     End If
                 Next
@@ -113,9 +113,9 @@
                 sumnow = sumnow + 1
                 TextBox2.Text = "(" & sumnow & "/" & filesum & ") 正在处理文件:" & vbNewLine & foundFile & vbNewLine & TextBox2.Text
                 If (CheckBox2.Checked) Then
-                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & foundFile & "x2.png") & vbNewLine & TextBox2.Text
+                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & foundFile & "x2.png") & vbNewLine & TextBox2.Text
                 Else
-                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 1.6 --noise_level 2 -o " & foundFile & "x2.jpg") & vbNewLine & TextBox2.Text
+                    TextBox2.Text = "完毕，执行信息：" & vbNewLine & CMD(Application.StartupPath & "\waifu2x-caffe\waifu2x-caffe-cui.exe -i " & foundFile & " -m noise_scale --scale_ratio 2.0 --noise_level 2 -o " & foundFile & "x2.jpg") & vbNewLine & TextBox2.Text
                 End If
             Next
         End If
